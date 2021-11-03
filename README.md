@@ -1,16 +1,29 @@
-# world_time
+# World Time
 
-Flutter project for world time.
 
-## Getting Started
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## General info
+This Flutter app implements requests to a third party API that returns world times. It is UNDER CONSTRUCTION!!!
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Technologies
+<p>
+  <img src="https://img.shields.io/badge/Dart-Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" />&nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/Android%20Studio-Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" />&nbsp;&nbsp;
+  <img src="https://img.shields.io/badge/Build%20Tool-Gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white" />&nbsp;&nbsp;
+</p>
+
+
+<!-- FOOTER (Author / Visit My Online Resume / Download My PDF Resume) -->
+<hr>
+<p align='center'>
+  <a href="#"><img src="https://img.shields.io/badge/author-%C2%A9%20Siomara%20Cintia%20Pantarotto.%20All%20rights%20reserved.-008080?style=social"></a>&nbsp;&nbsp;
+  <a href="https://siomara.com.br/"><img src="https://img.shields.io/badge/visit-My Online Resume-008080?style=social"></a>&nbsp;&nbsp;
+  <a href="https://siomara.com.br/ResumePANTAROTTO.pdf"><img src="https://img.shields.io/badge/download-My PDF Resume-008080?style=social"></a>
+</p>
+
+
