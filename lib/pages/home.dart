@@ -14,12 +14,22 @@ class _HomeState extends State<Home> {
       body: SafeArea(
           child: Column(
             children: <Widget>[
-              IconButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/location');
-                  },
-                  icon: const Icon(Icons.edit_location),
-              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/location');
+                },
+                child: Text('Choose location'),),
+
+
+
+
+
+              // IconButton(
+              //     onPressed: () {
+              //       Navigator.pushNamed(context, '/location');
+              //     },
+              //     icon: const Icon(Icons.edit_location),
+              // ),
             ],
           ),
       ),

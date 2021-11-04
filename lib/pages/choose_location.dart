@@ -12,19 +12,22 @@ class _ChooseLocationState extends State<ChooseLocation> {
   void getData() {
     // Simulate network request for a username
     Future.delayed(Duration(seconds: 3), () {
-      print('siomara');
+      print('siomara after 3 seconds');
     });
-
   }
+
+  int counter = 0;
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
+    // print('initState function ran');
+    getData();
   }
 
   @override
   Widget build(BuildContext context) {
+    // print('build function ran');
     return Scaffold(
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
@@ -33,7 +36,13 @@ class _ChooseLocationState extends State<ChooseLocation> {
         centerTitle: true,
         elevation: 0,
       ),
-      body: Text('Choose location screen'),
+      body: ElevatedButton(
+        onPressed: () {
+          setState(() {
+            counter += 1;
+          });
+        },
+        child: Text('counter is $counter'),),
     );
   }
 }
