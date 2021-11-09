@@ -14,15 +14,27 @@ class Loading extends StatefulWidget {
 class _LoadingState extends State<Loading> {
 
   void getTime() async{
+    // Make the request.
+    var urlWorldTime = Uri.parse('https://worldtimeapi.org/api/timezone/Europe/London');
+    Response response = await get(urlWorldTime);
+    Map data = jsonDecode(response.body);
+    //print('Response status: ${response.statusCode}');
+    //print('Response body: ${response.body}');
+    //print(data);
+    //get properties from data
+    String datetime = data['datetime'];
+    //String offset = data['utc_offset'];
+    String offset = data['offset'];
+    print(datetime);
+    print(offset);
 
   }
 
-  void getData() async {
-    var url = Uri.parse('https://jsonplaceholder.typicode.com/todos/1');
+  void getRhApi() async {
     //var url = Uri.parse('http://localhost:9060/v1/funcoes');
-    //var url = Uri.parse('http://10.8.41.152:9060/v1/funcoes');
-    //var url = Uri.parse('http://10.8.41.152:9060/v1/funcoes');
+    var url = Uri.parse('http://10.8.41.152:9060/v1/funcoes');
 
+    // Just a post syntax.
     //var response = await http.post(url, body: {'name': 'doodle', 'color': 'blue'});
 
     Response response = await get(url);
@@ -44,7 +56,7 @@ class _LoadingState extends State<Loading> {
   @override
   void initState() {
     super.initState();
-    getData();
+    getTime();
   }
 
   @override
