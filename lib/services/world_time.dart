@@ -1,5 +1,6 @@
 import 'package:http/http.dart';
 import 'dart:convert';
+import 'package:intl/intl.dart';
 
 class WorldTime {
 
@@ -12,26 +13,39 @@ class WorldTime {
 
   // Returns void but only when this async function is fully complete.
   Future<void> getTime() async{
-    // Make the request.
-    var urlWorldTime = Uri.parse('https://worldtimeapi.org/api/timezone/$url');
-    //var urlWorldTime = Uri.parse('https://worldtimeapi.org/api/timezones/$url');
-    Response response = await get(urlWorldTime);
-    Map data = jsonDecode(response.body);
-    print('data: $data');
 
-    // Get properties from data.
-    String datetime = data['datetime'];
-    String offset = data['utc_offset'].substring(1,3);
-    print('datetime: $datetime');
-    print('offset: $offset');
+    try {
 
-    // Create DateTime object.
-    DateTime now = DateTime.parse(datetime);
-    now = now.add(Duration(hours: int.parse(offset)));
-    print('now: $now');
+      // Make the request.
 
-    // Set the time property of the class.
-    time = now.toString();
+      // The commented line bellow is to try{} catch{error}
+      //var urlWorldTime = Uri.parse('https://worldtimeapi.org/api/timezones/$url');
+      var urlWorldTime = Uri.parse('https://worldtimeapi.org/api/timezone/$url');
+
+      Response response = await get(urlWorldTime);
+      Map data = jsonDecode(response.body);
+      //print('data: $data');
+
+      // Get properties from data.
+      String datetime = data['datetime'];
+      String offset = data['utc_offset'].substring(1,3);
+      //print('datetime: $datetime');
+      //print('offset: $offset');
+
+      // Create DateTime object.
+      DateTime now = DateTime.parse(datetime);
+      now = now.add(Duration(hours: int.parse(offset)));
+      //print('now: $now');
+
+      // Set the time property of the class.
+      //time = now.toString();
+      time = DateFormat.jm().format(now);
+
+    } catch (e) {
+      print('ATTENTION ===> Caught an error: $e');
+      time = 'ERROR: Could not get time data!';
+    }
+
   }
 
 }
