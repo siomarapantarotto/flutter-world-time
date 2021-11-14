@@ -1,16 +1,16 @@
-# World Time
+# World Time API Request
 
 
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [App screenshots](#app-screenshots)
+* [References](#references)
 
 
 ## General info
-This Flutter app implements requests to a third party API that returns world times.
-(https://worldtimeapi.org/pages/schema)
-The background of the app changes according to the retrieved time showing whether it is day or night.
+This Flutter app implements requests https://worldtimeapi.org/pages/schema API that returns world times.
+The app background changes according to the retrieved time showing whether it is day time or not.
 The app covers the following contents:
 
 - Scaffold & AppBar Widgets
@@ -55,10 +55,10 @@ The app covers the following contents:
 
 
 ## References
-The Net Ninja - https://github.com/iamshaunjp
-World Time API - https://worldtimeapi.org/
-JSON Placeholder: https://jsonplaceholder.typicode.com/
-Dart Packages - https://pub.dev/
+1) The Net Ninja - https://github.com/iamshaunjp
+2) World Time API - https://worldtimeapi.org/
+3) JSON Placeholder: https://jsonplaceholder.typicode.com/
+4) Dart Packages - https://pub.dev/
 
 
 <!-- FOOTER (Author / Visit My Online Resume / Download My PDF Resume) -->
