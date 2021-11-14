@@ -13,16 +13,16 @@ class _LoadingState extends State<Loading> {
 
   // 'await' inside of a function requires the function to be async.
   void setupWorldTime() async {
-    WorldTime instance = WorldTime(
-        location: 'Berlin', flag: 'germany.png', url: 'Europe/Berlin');
+    WorldTime instance = WorldTime(location: 'Brasilia', flag: 'brazil.png', url: 'America/Brasilia');
     await instance.getTime();
-    print('instance.time: ' + instance.time);
+    //print('instance.time: ' + instance.time);
 
     // Push from home page.
     Navigator.pushReplacementNamed(context, '/home', arguments: {
       'location': instance.location,
       'flag': instance.flag,
       'time': instance.time,
+      'isDayTime': instance.isDayTime
     });
   }
 
