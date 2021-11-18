@@ -13,7 +13,7 @@ class _LoadingState extends State<Loading> {
 
   // 'await' inside of a function requires the function to be async.
   void setupWorldTime() async {
-    WorldTime instance = WorldTime(location: 'Brasilia', flag: 'brazil.png', url: 'America/Brasilia');
+    WorldTime instance = WorldTime(location: 'Brasilia', flag: 'brazil.png', url: 'America/Sao_Paulo');
     await instance.getTime();
     //print('instance.time: ' + instance.time);
 
