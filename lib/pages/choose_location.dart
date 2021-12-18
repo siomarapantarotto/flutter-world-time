@@ -39,7 +39,6 @@ class _ChooseLocationState extends State<ChooseLocation> {
       'time': wtInstance.time,
       'isDayTime': wtInstance.isDayTime
     });
-
   }
 
   @override
