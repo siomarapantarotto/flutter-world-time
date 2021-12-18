@@ -34,7 +34,7 @@ class _HomeState extends State<Home> {
             padding: const EdgeInsets.fromLTRB(0, 120.0, 0, 0),
             child: Column(
               children: <Widget>[
-                FlatButton.icon(
+                TextButton.icon(
                   onPressed: () async {
                     dynamic result =
                         await Navigator.pushNamed(context, '/location');
@@ -64,7 +64,7 @@ class _HomeState extends State<Home> {
                   children: <Widget>[
                     Text(
                       data['location'],
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 28.0,
                         letterSpacing: 2.0,
                         color: Colors.white,
@@ -75,17 +75,11 @@ class _HomeState extends State<Home> {
                 const SizedBox(height: 20.0),
                 Text(
                   data['time'],
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 50.0,
                     color: Colors.white,
                   ),
-                )
-                // IconButton(
-                //     onPressed: () {
-                //       Navigator.pushNamed(context, '/location');
-                //     },
-                //     icon: const Icon(Icons.edit_location),
-                // ),
+                ),
               ],
             ),
           ),
